@@ -1,13 +1,13 @@
 # Site settings
 title: Andy Blog
-SEOTitle: Andy的博客 | Andy Blog
+SEOTitle: AndyCao的博客
 header-img: img/post-bg-desk.jpg
 email: 365026891@qq.com
 description: "Every failure is leading towards success."
 keyword: "Andy, Andy Blog, 曹向陶的博客, caoxiangtao, 曹向陶, iOS, swift, objective-c"
-url: "https://andycxt.github.io"          # your host, for absolute URL
+url: "https://AndyXTCao.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/AndyXTCao/andycxt.github.io" # you code repository
+github_repo: "https://github.com/AndyXTCao/AndyXTCao.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -58,7 +58,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 6c0bc58c2c1c2a04a85d                            #生成的clientID
   clientSecret: 02c48add5531422c7312b978c3edb93cf193c6be    #生成的clientSecret
-  repo: andycxt.github.io    #仓库名称
+  repo: AndyXTCao.github.io    #仓库名称
   owner: AndyXTCao    #github用户名
   admin: AndyXTCao
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
