@@ -7,7 +7,8 @@ author:     AndyCao
 header-img: img/home-bg-o.jpg
 catalog: true
 tags:
-    - iOS lldb
+    - iOS
+    - lldb
 ---
 
 LLDB是Xcode默认的调试器，如下图所示：
