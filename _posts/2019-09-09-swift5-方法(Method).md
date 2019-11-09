@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      swift5学习笔记-方法(Method)
+title:      swift5-方法(Method)
 subtitle:   
 date:       2019-09-10
 author:     AndyCao
