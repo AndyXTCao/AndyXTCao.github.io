@@ -15,7 +15,7 @@ tags:
 顾名思义，就是运行循环，在程序运行过程中，循环做一些事情。先简单看下下面两个示例：
 
 #### 示例1
-```C
+```swift
 int main(int argc, char * argv[]) {
     @autoreleasepool {
        NSLog(@"Hello World!");
@@ -26,7 +26,7 @@ int main(int argc, char * argv[]) {
 由于没有RunLoop，在执行完NSLog之后，程序即将退出
 
 #### 示例2
-```C
+```swift
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
@@ -48,8 +48,8 @@ iOS中，有2套API可以访问和使用RunLoop
 - Foundation框架中的NSRunLoop
 - CoreFoundation框架中的CFRunLoopRef
 
-NSRunLoop是基于CFRunLoopRef的一层OC包装；CFRunLoopRef是开源的
-地址：https://opensource.apple.com/tarballs/CF/
+NSRunLoop是基于CFRunLoopRef的一层OC包装；![CFRunLoopRef](https://opensource.apple.com/tarballs/CF/)是开源的
+
 
 ### RunLoop与线程
 - 每条线程都有唯一的一个与之对应的RunLoop对象
@@ -60,12 +60,12 @@ NSRunLoop是基于CFRunLoopRef的一层OC包装；CFRunLoopRef是开源的
 
 ### 获取RunLoop对象
 Foundation
-```Objective-C
+```swift
 [NSRunLoop currentRunLoop]; // 获得当前线程的RunLoop对象
 [NSRunLoop mainRunLoop]; // 获得主线程的RunLoop对象
 ```
 CoreFoundation
-```C
+```swift
 CFRunLoopGetCurrent(); // 获得当前线程的RunLoop对象
 CFRunLoopGetMain(); // 获得主线程的RunLoop对象
 
@@ -106,7 +106,7 @@ RunLoop启动时只能选择其中一个Mode，作为currentMode
 有时候需要一个 Timer，在两个 Mode 中都能得到回调，一种办法就是将这个 Timer 分别加入这两个 Mode。还有一种方式，就是将 Timer 加入到顶层的 RunLoop 的 “commonModeItems” 中。”commonModeItems” 被 RunLoop 自动更新到所有具有”Common”属性的 Mode 里去。
 
 ### CFRunLoopObserverRef
-```C
+```swift
 /* Run Loop Observer Activities */
 typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
     kCFRunLoopEntry = (1UL << 0),         // 即将进入Loop
@@ -119,7 +119,7 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
 };
 ```
 可以添加Observer来监听RunLoop的所有状态
-```C
+```swift
 // 创建Observer
 CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
     switch (activity) {
@@ -161,7 +161,7 @@ CFRelease(observer);
 #### RunLoop运行逻辑
 ![](https://images.cnblogs.com/cnblogs_com/plusone/1527513/o_RunLoop_1.png)
 
-```C
+```swift
 int32_t __CFRunLoopRun()
 {
     // 通知即将进入runloop
