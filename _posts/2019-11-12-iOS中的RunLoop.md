@@ -48,7 +48,7 @@ iOS中，有2套API可以访问和使用RunLoop
 - Foundation框架中的NSRunLoop
 - CoreFoundation框架中的CFRunLoopRef
 
-NSRunLoop是基于CFRunLoopRef的一层OC包装；![CFRunLoopRef](https://opensource.apple.com/tarballs/CF/)是开源的
+NSRunLoop是基于CFRunLoopRef的一层OC包装；[CFRunLoopRef](https://opensource.apple.com/tarballs/CF/)是开源的
 
 
 ### RunLoop与线程
@@ -93,7 +93,7 @@ CFRunLoopModeRef代表RunLoop的的运行模式，常用的模式有2种：
 ![](https://user-gold-cdn.xitu.io/2019/11/12/16e5e303d8e8e793?w=872&h=578&f=png&s=224556)
 
 - **Timer**表示定时器；主要处理NSTimer、performSelector:withObject:afterDelay:
-- **Observer**表示监听器；主要处理UI刷新、监听RunLoop的状态、AutoreleasePool等
+- **Observer**表示监听器；主要处理UI刷新（beforeWaiting）、监听RunLoop的状态、AutoreleasePool（beforeWaiting）等
 - **Source0**表示要处理的事情；比如触摸事件、performSelector:onThread:
 - **Source1**表示要处理的事情；比如基于Port的线程间的通信，系统事件捕捉
 
