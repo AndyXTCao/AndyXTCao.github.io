@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      session/cookie
+title:      session和cookie
 subtitle:   
-date:       2019-09-13
+date:       2019-09-11
 author:     AndyCao
 header-img: img/post-bg-coffee.jpeg
 catalog: true
@@ -47,4 +47,5 @@ session 也是用来记录用户状态的，区分用户
 **状态存放在服务器端**
 
 #### session和cookie的关系
-- session需要依赖cookie机制
+session需要依赖cookie机制
+![](https://user-gold-cdn.xitu.io/2019/11/16/16e74e4d3126bed1?w=1438&h=588&f=png&s=178240)
